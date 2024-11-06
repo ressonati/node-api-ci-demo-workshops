@@ -91,7 +91,7 @@ describe("Api tests", () => {
     it.skip("check books in user", async () => {
         const response = await spec()
          .get(`${baseUrl}/Account/v1/User/${userId}`)
-         .withBearerToken(authToken) // Poprawione wywołanie z kropką
+         .withBearerToken(authToken) 
          .inspect();
         expect(response.statusCode).to.eql(200); })
 });
