@@ -1,10 +1,11 @@
 {
   "name": "api-ci-demo-workshops",
   "version": "1.0.0",
+  "type": "module",
   "description": "Continuous Integration with API Testing in Node.js – Workshop",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha tests/api.test.js --timeout 1000"
+    "test": "npx mocha tests/api.test.js --reporter mochawesome --timeout 1000"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "pactum": "^3.7.3"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "mochawesome": "^7.1.3"
   }
 }
