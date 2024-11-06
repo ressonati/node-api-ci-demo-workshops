@@ -2,7 +2,8 @@
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: API tests CI
-env: SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
+env: 
+    SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
 on:
   push:
     branches: [ "main" ]
