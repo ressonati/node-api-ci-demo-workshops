@@ -11,6 +11,10 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: '0 17 * * *'
+uses: actions/upload-artifact@v2
+with:
+    name: build-artifacts
+    path: build/output.txt
 
 jobs:
   build:
