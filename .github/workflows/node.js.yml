@@ -14,8 +14,7 @@ on:
 uses: actions/upload-artifact@v4
 with:
     name: save-artifacts
-    path: "/home/runner/work/node-api-ci-demo-workshops/node-api-ci-demo-workshops/mochawesome-report"
-
+    path: "/Users/monika/Desktop/node-api-ci-demo-workshops/mochawesome-report"
 jobs:
   build:
 
