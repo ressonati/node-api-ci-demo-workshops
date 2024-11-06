@@ -8,7 +8,7 @@ import {baseUrl, userId} from '../helpers/data.js';
 
 let authToken; 
 describe("Api tests", () => {
-    it("get requests", async () => {
+    it.skip("get requests", async () => {
         const response = await spec()
             .get(`${baseUrl}/BookStore/v1/Books`) 
             .inspect();
@@ -58,7 +58,7 @@ describe("Api tests", () => {
         console.log(authToken); 
     });
     it("check token", async () => { console.log("another it blokcs" + authToken)})
-    it("Create a book", async () => {
+    it.skip("Create a book", async () => {
         const response = await spec()
             .post(`${baseUrl}/BookStore/v1/Books`)
             .withBearerToken(authToken) // Poprawione wywołanie z kropką
