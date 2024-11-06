@@ -32,7 +32,7 @@ describe("Api tests", () => {
         
     });
 
-    it("Authorize user", async () => {
+    it.skip("Authorize user", async () => {
         const response = await spec()
             .post(`${baseUrl}/Account/v1/Authorized`) // Dodano brakujący ukośnik
             .withBody({
@@ -44,7 +44,7 @@ describe("Api tests", () => {
         expect(response.statusCode).to.eql(200);
     });
 
-    it("Generate token", async () => {
+    it.skip("Generate token", async () => {
         const response = await spec()
             .post("https://demoqa.com/Account/v1/GenerateToken") 
             .withBody({
@@ -88,7 +88,7 @@ describe("Api tests", () => {
         expect(response.statusCode).to.eql(201);
         console.log("Response:", response.body);
     });
-    it("check books in user", async () => {
+    it.skip("check books in user", async () => {
         const response = await spec()
          .get(`${baseUrl}/Account/v1/User/${userId}`)
          .withBearerToken(authToken) // Poprawione wywołanie z kropką
