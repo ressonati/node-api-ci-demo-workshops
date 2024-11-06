@@ -9,7 +9,7 @@ import {baseUrl, userId} from '../helpers/data.js';
 describe("Api tests", () => {
     it("get requests", async () => {
         const response = await spec()
-            .get(`${basUrl}/BookStore/v1/Books"`)
+            .get(`${baseUrl}/BookStore/v1/Books"`)
             .inspect();
         expect(response.statusCode).to.eql(200);
         expect(response.body.books[1].title).to.eql("Learning JavaScript Design Patterns");
@@ -19,7 +19,7 @@ describe("Api tests", () => {
 
     it.skip("Create a user", async () =>{
         const response = await spec()
-        .post(`${basUrl}/Account/v1/user`)
+        .post(`${baseUrl}/Account/v1/user`)
         .withBody({
             userName: "mnowako",
             password: proces.env.SECRET_PASSWORD
@@ -31,7 +31,7 @@ describe("Api tests", () => {
     })
     it("Authorize user", async () => {
         const response = await spec()
-            .post("https://demoqa.com/Account/v1/Authorized")
+            .post(`${baseUrl}Account/v1/Authorized`)
             .withBody({
                 userName: "mnowako",
                 password: process.env.SECRET_PASSWORD  
@@ -42,7 +42,7 @@ describe("Api tests", () => {
     });
     it("Generate token", async () => {
         const response = await spec()
-            .post("https://demoqa.com/Account/v1/GenerateToken")
+            .post(`${baseUrl}Account/v1/GenerateToken`)
             .withBody({
                 userName: "mnowako",
                 password: process.env.SECRET_PASSWORD  
