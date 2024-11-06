@@ -19,7 +19,7 @@ describe("Api tests", () => {
         console.log(process.env.SECRET_PASSWORD);
     });
 
-    it.spkip("Create a user", async () => {
+    it.skip("Create a user", async () => {
         const response = await spec()
             .post(`${baseUrl}/Account/v1/user`)
             .withBody({
@@ -32,7 +32,7 @@ describe("Api tests", () => {
         
     });
 
-    it.ski("Authorize user", async () => {
+    it.skip("Authorize user", async () => {
         const response = await spec()
             .post(`${baseUrl}/Account/v1/Authorized`) // Dodano brakujący ukośnik
             .withBody({
