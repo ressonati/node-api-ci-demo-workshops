@@ -19,7 +19,7 @@ describe("Api tests", () => {
         console.log(process.env.SECRET_PASSWORD);
     });
 
-    it.skip("Create a user", async () => {
+    it.spkip("Create a user", async () => {
         const response = await spec()
             .post(`${baseUrl}/Account/v1/user`)
             .withBody({
@@ -32,7 +32,7 @@ describe("Api tests", () => {
         
     });
 
-    it.skip("Authorize user", async () => {
+    it.ski("Authorize user", async () => {
         const response = await spec()
             .post(`${baseUrl}/Account/v1/Authorized`) // Dodano brakujący ukośnik
             .withBody({
@@ -44,7 +44,7 @@ describe("Api tests", () => {
         expect(response.statusCode).to.eql(200);
     });
 
-    it.skip("Generate token", async () => {
+    it("Generate token", async () => {
         const response = await spec()
             .post("https://demoqa.com/Account/v1/GenerateToken") 
             .withBody({
@@ -58,7 +58,7 @@ describe("Api tests", () => {
         console.log(authToken); 
     });
     it("check token", async () => { console.log("another it blokcs" + authToken)})
-    it.skip("Create a book", async () => {
+    it("Create a book", async () => {
         const response = await spec()
             .post(`${baseUrl}/BookStore/v1/Books`)
             .withBearerToken(authToken) // Poprawione wywołanie z kropką
